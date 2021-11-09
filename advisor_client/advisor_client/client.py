@@ -130,7 +130,7 @@ class AdvisorClient(object):
 
   def list_trial_metrics(self, study_name, trial_id):
     url = "{}/suggestion/v1/studies/{}/trials/{}/metrics".format(
-        self.endpoint, study_name)
+        self.endpoint, study_name, trial_id)
     response = requests.get(url)
     trial_metrics = []
 
